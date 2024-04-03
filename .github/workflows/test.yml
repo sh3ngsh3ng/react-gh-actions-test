@@ -10,5 +10,10 @@ jobs:
         uses: actions/setup-node@v3
       - name: Install Depedencies
         run: npm ci
-      - name: npm test
+      - name: Run Unit Test
         run: npm run test-prod
+      - name: Get Unit Test Logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: test-results.json

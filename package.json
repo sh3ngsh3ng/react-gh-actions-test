@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test-prod": "react-scripts test --watchAll=false --outputFile=test-results.json",
+    "test-prod": "react-scripts test --watchAll=false --outputFile=test-results.json --detectOpenHandles --testTimeout=10000",
     "test-local": "react-scripts test --watchAll --coverage",
     "eject": "react-scripts eject"
   },
