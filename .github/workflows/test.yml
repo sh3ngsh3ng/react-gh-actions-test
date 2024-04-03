@@ -1,0 +1,14 @@
+name: Pipeline testing
+on: push
+jobs: 
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Retrieve Code
+        uses: actions/checkout@v3
+      - name: Install Environment (NodeJS)
+        uses: actions/setup-node@v3
+      - name: Install Depedencies
+        run: npm ci
+      - name: npm test
+        run: npm test
